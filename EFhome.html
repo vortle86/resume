@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="eng-us">
+
+<head>
+<title>Elisheba Fay</title>
+
+<meta charset=“UTF-8”>
+
+<link rel="stylesheet" type="text/css" href="http://elishebafay.com/Resume/resumeStyles.css">
+<style>
+
+</style>
+<script type="text/javascript">
+function infotext(button){
+  var id=button.id;
+switch (id) {
+  case "faqbutton" : 
+    document.getElementById("faqdiv").style.display="block";
+    document.getElementById("home").style.display="none";
+    break;
+  case "nameHead" : 
+    document.getElementById("whatName").style.display="block";
+    break;
+  case "whereName" : 
+    document.getElementById("origin").style.display="block";
+    document.getElementById("whatName").style.display="none";
+    break;
+  case "notmyname" : 
+    document.getElementById("justTry").style.display="block"; 
+    break;
+  case "whereBeen" : 
+    document.getElementById("where").style.display="block"; 
+    document.getElementById("origin").style.display="none";
+    break;
+  case "whyCode" : 
+    document.getElementById("why").style.display="block";
+    document.getElementById("where").style.display="none"; 
+    break;
+  case "whatElse" : 
+    document.getElementById("boat").style.display="block";
+    document.getElementById("why").style.display="none"; 
+    break;
+  default: 
+    alert("You're being ridiculous");
+}
+}
+function play(){
+  var audio = document.getElementById("audio");
+  audio.play();
+}
+
+</script>
+
+</head>
+
+<body>
+
+
+<!--Navigation Bar-->
+<nav id="primary_nav_wrap">
+<ul>
+  <li class="current-menu-item"><a href="http://elishebafay.com/Home.html">Home</a></li>
+  <li><a id="faqbutton" onclick="infotext(this)">FAQ</a></li>
+  <li><a href="#">Menu 2</a>
+    <ul>
+      <li><a href="#">Sub Menu 1</a></li>
+    </ul>
+  </li>
+  <li><a href="http://elishebafay.com/Resume/Resume.html">Resume</a></li>
+  <div class="centerbuttons">
+  <li><a href="mailto:elisheba@elishebafay.com"><button type="button" class="csmb csmb-round csmb-border mail"></button></a></li>
+  <li><a href="https://www.linkedin.com/pub/elisheba-fay/b3/526/261"><button type="button" class="csmb csmb-round csmb-border linkedin"></button></a></li>
+  <li><a href="https://github.com/vortle86"><button type="button" class="csmb csmb-round csmb-border github-alt"></button></a></li>
+</div>
+</ul>
+</nav>
+<!--Content Section-->
+<div class="paper">
+<div class="name">ELISHEBA FAY</div>
+
+<div id="OverviewHead" class="sectiontitle bottomborder"></div>
+
+<div><p>Junior Javascript developer with excellent attention to detail, problem solving and communication skills, and collaboration experience.</p>
+</div>
+<!--home text-->
+<div id="home">
+After a decade-long career in human services and education, I am excited to transition into the next chapter of my life: software and web development. 
+</div>
+
+<!--faq-->
+<div id="faqdiv" class="faq" style="display:none">
+<!--faq/What's Your Name-->
+<button type="button" id="nameHead" class="belize-hole-flat-button" onclick="infotext(this)">What's your name again?</button><br />
+
+<div id="whatName" class="faqtext">
+  <p>My name is Elisheba, pronounced ellie-sheva.  The b sounds like a v, and it helps many people to imagine pronouncing two words. </p> 
+  <h4>I'll never get that!</h4>
+  <p>Sure you will.  Here's what it sounds like, so now you can practice 100 times each night before you go to bed!</p>
+  <audio controls="controls" src="http://elishebafay.com/Resume/Voice%20057.mp3" preload="auto"></audio>
+  <br />That's still too hard. <br />
+  <button type="button" id="notmyname" class="nephritis-flat-button" onclick="play();infotext(this)">Can I just call you Ellie, Elizabeth, Alyssa?</button>
+  <div class="faqtext" id='justTry'>
+  <p>Seriously though, I realize my name is tough, but I appreciate any attempt- don't worry about trying to say it perfectly.</p></div>
+</div>
+<!--faq/Where did your name come from-->
+<button type="button" id="whereName" class="belize-hole-flat-button" onclick="infotext(this)">Where did your name come from?</button><br />
+
+<div id="origin" class="faqtext">
+<p>Elisheba is <a class='tooltips'>Hebrew<span>אלישבע</span></a>, an earlier form of the name that later became Elizabeth.  It's rare here, but in Israel and in some American Orthodox Jewish communities, it's a very common name.</p>
+</div>
+<!--faq/Where have you been?-->
+<button type="button" id="whereBeen" class="belize-hole-flat-button" onclick="infotext(this)">Where have you been all my life?</button><br />
+
+<div id="where" class="faqtext">
+<p>I'm a Colorado Native and grew up in Denver.  I received my BA from <a href="http://www.sjc.edu/">St John's College</a> in Santa Fe and have spent most of my career working in human services (supporting at-risk youth and people with disabilities) and education (as a special education teacher from kinder to postsecondary.)  I've traveled throughout Latin America and visited Israel, but I keep ending up back home to Colorado.</p>
+
+<div class="diy-slideshow">
+  <figure class="show"><img src="http://elishebafay.com/PracticeStuff/Pictures/MVC-059XElishebaAndAltonCropped.jpg" alt="Alton" width="100%" /><figcaption>Just imagine all the adventures we'll have!</figcaption></figure>
+  <figure><img src="http://elishebafay.com/PracticeStuff/Pictures/00000365.jpg" alt="I'm one in a million" width="100%" /><figcaption>Looking for a one in a million coder? Found her!</figcaption></figure>
+  <figure ><img src="http://elishebafay.com/PracticeStuff/Pictures/00000400.jpg" alt="Catching frogs" width="100%" /><figcaption>Need someone to catch frogs and snakes around the office? I'm on it!</figcaption></figure>
+  <figure><img src="http://elishebafay.com/PracticeStuff/Pictures/E%20and%20Venga%20the%20cow.jpg" alt="Venga" width="100%" /><figcaption>I can also take care of all your cow-related needs.</figcaption></figure>
+  <figure ><img src="http://elishebafay.com/PracticeStuff/Pictures/00000619.jpg" alt="Botany" width="100%" /><figcaption>Or perhaps someone with knowledge of Colorado flora? Got you covered!</figcaption></figure>
+  <figure ><img src="http://elishebafay.com/PracticeStuff/Pictures/00000624.jpg" alt="Handstand" width="100%" /><figcaption>I hope handstands are not in your job description, because I can't do this anymore.</figcaption></figure>
+  <figure ><img src="http://elishebafay.com/PracticeStuff/Pictures/Elisheba%20-%20Too%20much%20partying..jpg" alt="Nap" width="100%" /><figcaption>Still totally capable of this though.</figcaption></figure>
+  <figure ><img src="http://elishebafay.com/PracticeStuff/Pictures/2012-09-26%2017.51.39.jpg" alt="HelmetRaptor" width="100%" /><figcaption>I will promise not to do this in the office... when anyone's looking...</figcaption></figure>
+
+<span class="prev">&laquo;</span>
+<span class="next">&raquo;</span>
+</div><!--slideshow-->
+<script>
+//Simple slideshow adapted from http://themarklee.com/2013/12/26/simple-diy-responsive-slideshow-made-html5-css3-javascript/
+
+(function(){
+
+var counter = 0,
+$items = document.querySelectorAll('.diy-slideshow figure'),
+numItems = $items.length;
+
+var showCurrent = function(){
+var itemToShow = Math.abs(counter%numItems);
+
+[].forEach.call( $items, function(el){
+el.classList.remove('show');
+});
+
+$items[itemToShow].classList.add('show');
+};
+
+document.querySelector('.next').addEventListener('click', function() {
+counter++;
+showCurrent();
+}, false);
+
+document.querySelector('.prev').addEventListener('click', function() {
+counter--;
+showCurrent();
+}, false);
+
+})();
+
+</script>
+</div><!--where-->
+<!--faq/Why code-->
+<button type="button" id="whyCode" class="belize-hole-flat-button" onclick="infotext(this)">Why coding?</button><br />
+
+<div id="why" class="faqtext">
+<p>My experience, while technology rich, has not been primarily tech-focused.  Both my father and brother are developers, and as a result I grew up with lots of exposure to and experiences with computers and software including some beginning programming experience.  I learned to be curious and to try to solve my own problems, as well as to use available resources (human and other) to figure things out.  As a result of this active outlook toward technology and software, I have been able to develop a broader-than-average skill set with basic office and personal applications which has made me a valuable troubleshooting resource among my colleagues throughout my career.</p>
+<p>I also have extensive experience in studying languages (Spanish, French, Ancient Greek, and Hebrew), and while I understand the serious distinctions between programming languages and communication languages, I find that intimate understanding with the structure and function of linguistic elements and an ability to combine, parse, and translate between those elements is supportive when working with code.</p>
+<p>Possibly my most robust skillset when considering studying software development is my mathematical knowledge.  I have studied and taught advanced mathematics throughout my educational and professional career including graduate work in mathematics education.  I thrive on finding patterns, solving problems, and working within structure.</p>
+<p>I'm excited to begin my new career as a developer in a setting which allows me use my energy and experience while developing my technical skills and serving as part of a team.</p>
+</div>
+<!--faq/hobbies-->
+<button type="button" id="whatElse" class="belize-hole-flat-button" onclick="infotext(this)">What else floats your boat?</button><br />
+<div id="boat" class="faqtext">
+<p>Somehow, even when I'm not practicing and studying to become a <a class='tooltips'>Level 49 CodeWizard<div><img src="http://elishebafay.com/PracticeStuff/Pictures/e-hat.jpg" height="100"><br />I hear you get a better hat at Level 49.</div></a>Level 49 CodeWizard, I manage to keep busy.  </p>
+<p>I'm interested in xeriscape gardening and have been slowly working to landscape my property in ways that are respectful of our state's limited water resources and ecological balance.</p>
+<p>I'm also a former professional dog trainer. These days I only train my own dogs, but we have plenty to work on! My current dogs, Inspector SpaceTime (Spector for short) and Katniss, are both young and inexperienced, but I hope to compete with them in dog sports including obedience, rally obedience, and agility.  We also play with herding, nosework, and lurecoursing just for fun.</p>
+<p>In order to maintain my license as a Coloradan, I'm contractually obligated to mention that I love to get outdoors, hike, camp, and explore in our beautiful state! (Fortunately enough, it's also true!)</p>
+</div>
+
+</div> <!--faq-->
+</div> <!--paper-->
+
+<audio id="audio" src="http://elishebafay.com/Resume/The%20Ting%20Tings%20-%20That's%20Not%20My%20Name%20(1).mp3"></audio>
+
+
+</body>
+</html>

@@ -1,0 +1,162 @@
+
+body
+{
+	margin: 0em;
+	padding: 0em;
+	background: #ECECEC url(images/main-bg.jpg) repeat;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 9.5pt;
+	color: #4e4e4e;
+}
+.container{
+	margin-left: auto;
+    margin-right: auto;
+    width: 960px;
+}
+#header{
+	position: relative;
+}
+#header-wrapper{
+	overflow:hidden;
+	margin-bottom:1.5rem;
+	padding:2rem 0rem 3.5rem 0rem;
+	background:#fc6;
+	box-shadow: inset 0 -10px 20px -10px rgba(0,0,0,.30);
+	height:2.5rem;
+}
+#logo{
+	display:block;
+}
+#logo a{
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 3rem;
+    color: #FFF !important;
+}
+#nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display:block;
+    vertical-align: baseline;
+}
+#nav ul{
+	text-align: center;
+	margin-top:1rem;
+	list-style:none;
+	vertical-align: baseline;
+}
+#nav li{
+	display:inline-block;
+	text-align: -webkit-match-parent;
+}
+#nav li :hover{
+	color:#f58a07;
+	background: #ECECEC url(images/main-bg.jpg) repeat;
+	font-weight:400;
+	font-size:1.2rem;
+
+}
+#nav a{
+	display: block;
+    float: left;
+    height: 4em;
+    padding: 2.30em 1em 0em 1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif !important;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #FFFFFF;
+    border-radius: 5px 5px 0px 0px;
+}
+img{
+	display:block;
+	width:100%;
+}
+
+#infoblocks{
+	overflow: hidden;
+    padding: 2em 0em 0em 0em;
+}
+
+.row>* {
+    float: left;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.\33 u {
+    width: 25%;
+http://localhost/personal_redesign/spectorLureCoursecropped.jpg}
+#infoblocks .box {
+    padding: 0 2em;
+}
+#infoblocks h2 {
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    font-size: 1.75em;
+    font-weight: 700;
+    color: #084887;
+}
+#infoblocks .subtitle {
+    margin: 0 0 1em 0;
+    padding: 0 0 1em 0;
+    border-bottom: 1px solid #E2E2E2;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    font-weight: 400;
+    color: #3D3D3D;
+}
+ul.style1{
+	-webkit-padding-start: 25px;
+}
+ul.style1 li {
+    padding: 0.65rem 0 0.65rem 0em;
+    background: url(images/bullet-icon.png) no-repeat left 50%;
+}
+ul.style1 a {
+    display: block;
+    text-decoration: none;
+    color: #676767;
+}
+.button {
+    display: inline-block;
+    margin-top: 1.50em;
+    background: #f9ab55;
+    border-radius: 5px;
+    border: 1px solid #fc6;
+    box-shadow: 1px 2px 5px rgba(0,0,0,.4);
+    letter-spacing: 1px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.10em;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+.button span {
+    display: inline-block;
+    padding: 0.75em 2.00em;
+    border-radius: 5px;
+}
+#footer {
+  overflow: hidden;
+  padding: 20px 0px;
+  background: #fc6;
+  width:100%;
+  height:30px;
+  margin:45px 0px 0px 0px;
+  padding:0;
+}
+#footer p {
+  text-align: center;
+  font-size: 12px;
+  padding:10px 0px;
+  margin:0;
+}

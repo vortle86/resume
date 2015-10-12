@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="eng-us">
+
+<head>
+	<title>Forms</title>
+	
+	<meta charset=“UTF-8”>
+	<link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="/Resume/resumeStylesR.css">
+	<link rel="stylesheet" type="text/css" href="deadwood.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+
+</head>
+
+<body>
+	<header id="header-wrapper">
+		<div class="container" id="header">
+			<div id="logo">
+				<span class="ef">
+					<a href="http://elishebafay.com">Elisheba Fay</a></span>
+				</div><!--end logo div-->
+
+				<nav id="nav">
+					<ul>
+						<li><a href="http://elishebafay.com">Home</a></li>
+						<li><a href="rebuildResume.html">Resume</a></li>
+						<li><a href="rebuildPortfolio.html">Portfolio</a></li>
+						<li><a href="mailto:elisheba@elishebafay.com" title="Email Me!"><span id="mail" class="fa fa-envelope-o"></span> Mail</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<div id="main">
+			<h1>Common HTML Form Elements</h1>
+			<!--Form tag Intro-->
+			Forms are contained by <span class="code">&ltform&gt</span> and <span class="code">&lt/form&gt</span> tags.
+			<div class="code">&ltform id="form" action="" method="post"&gt
+			</div>
+			When you make a form, you need the following attributes inside the form tag:
+			<span class="code">id="" action="" </span>
+			(with the address to send the info to) and 
+			<span class="code">method="" </span>
+			(almost always <b>post</b>.)<br />
+			You might also need invisible pieces that identify the form to the form parser.<br />
+			<hr>
+			<!--Text Fields-->		
+			The most common type of form field is for text.  It looks like this: 
+			<div class="code">&ltinput type="text" name="text"&gt
+			</div>
+			<div class="view"><input type="text" name="favChar">
+			</div>
+			The <span class="code">input</span> tag is special because it doesn't require a closing tag.<br />
+			Right now, this input field doesn't give any clue what goes in it. To fix this, you can use a <span class="code"> &ltlabel&gt </span>tag:<br />
+			<div class="code">&ltlabel for="favChar"&gtPut your favorite Deadwood character here!&lt/label&gt<br />
+				&ltinput type="text" name="favChar" id="favChar"&gt
+			</div>
+			When you use the <span class="code">label</span>tag, make sure the <span class="code">for</span> attribute of the <span class="code">label</span> matches the <span class="code">id</span> attribute of the <span class="code">input.</span> Using labels is also a helpful accessibility practice for people who use screenreaders to access your form.
+			<div class="view">
+				<label for="favChar">Put your favorite Deadwood character here!</label>
+				<input type="text" name="favChar" id="favChar"/>
+			</div>
+			You can also provide a hint by using the <span class="code">value</span> attribute to show prompt text inside the field: 
+			<div class="code">&ltlabel for="favChar"&gtPut your favorite Deadwood character here!&lt/label&gt<br />
+				&ltinput type="text" name="favChar" id="favChar" value="Favorite Deadwood Character"&gt
+			</div>
+
+			<div class="view">
+				<label for="favChar">Put your favorite Deadwood character here!</label>
+				<input type="text" name="favChar" id="favChar" value="Favorite Deadwood Character" />
+			</div>
+
+			But Woe! Our cue has been cut off by the size of the box. We need to change the size with the size attribute. 
+
+			<div class="code">&ltlabel for="favChar"&gtPut your favorite Deadwood character here!&lt/label&gt<br />
+				&ltinput type="text" name="favChar" id="favChar" value="Favorite Deadwood Character" size=30&gt
+			</div>
+			<div class="view">
+				<label for="favChar">Put your favorite Deadwood character here!</label>
+				<input type="text" name="favChar" id="favChar" value="Favorite Deadwood Character" size=30 />
+			</div>
+
+			If we want to weed out any degenerates who might have tried to pick Francis Wolcott (15 characters) while still allowing for the choice of Al Swearengen (13 characters) we can set a maximum size for our field (rejecting inputs beyond a certain length.) 
+
+			<div class="code">&ltlabel for="favChar"&gtPut your favorite Deadwood character here!&lt/label&gt<br />
+				&ltinput type="text" name="favChar" id="favChar" value="Favorite Deadwood Character" maxsize=14&gt
+			</div>
+
+			This size isn't long enough to hold our prompt, but it will keep out the scary serial killer fans so I'm ok with that.
+
+			<div class="view">
+				<label for="favChar">Put your favorite Deadwood character here!</label>
+				<input type="text" name="favChar" id="favChar" value="Favorite Deadwood Character" maxsize=14 />
+			</div>
+
+			If we want to still see our prompt, but continue weeding out the lunatics, we can set a size and maxsize.
+
+			<div class="code">&ltlabel for="favChar"&gtPut your favorite Deadwood character here!&lt/label&gt<br />
+				&ltinput type="text" name="favChar" id="favChar" value="Favorite Deadwood Character" size=30 maxsize=14&gt
+			</div>
+
+			<div class="view">
+				<label for="favChar">Put your favorite Deadwood character here!</label>
+				<input type="text" name="favChar" id="favChar" value="Favorite Deadwood Character" size=30 maxsize=14/>
+			</div>
+
+			There are also other kinds of input fields, including:
+			<ul>
+				<li>email (for an email address)</li>
+				<li>number (for a number)</li>
+				<li>tel (for a phone number)</li>
+				<li>url (caught the pattern yet?)</li>
+			</ul>
+			There are also lots of specialized input types, some of which we will show below, but others you'll have to <a href="http://www.w3schools.com/tags/att_input_type.asp" Alt="input attribute values">explore yourself.</a><hr>
+			<!--Radio Buttons and Checkboxes-->
+			Sometimes we want an input, but don't want to give too much choice. Perhaps we want the user to be able to select only a single option from a pretty short list.<br />
+			If we want to know whom the user regards as the protagonist of Deadwood, we might use a radio button, because we have a narrow view of the literary concept and have defined protagonist as being a single person role.<br />
+			<div class="question">Who is the protagonist of Deadwood?
+			</div>
+			<div class="code">
+				&ltlabel for="bullock"&gtSeth Bullock&lt/label&gt<br />
+				&ltinput type="radio" name="prot" id=
+				"bullock" value="bullock"&gt<br />
+				&ltlabel for="swearengen"&gtAl Swearengen&lt/label&gt<br />
+				&ltinput type="radio" name="prot" id="swearengen" value="swearengen"&gt
+			</div>
+			Notice that this time, we must have a name, which will be the same for all of our choices to tell the form parser what the information means, and a value to tell what the user chose.
+			<div class="view">
+				<label for="bullock">Seth Bullock</label>
+				<input type="radio" name="prot" id="bullock" value="bullock"> 
+				<label for="swearengen"> Al Swearengen</label>
+				<input type="radio" name="prot" id="swearengen"value="swearengen"> 
+				<label for="none">Don't be ridiculous, there is no protagonist. </label>
+				<input type="radio" name="prot" id="none" value="none">
+			</div>
+			Or perhaps you would like to allow the user to select more than one option.  You would use checkboxes. <br />
+			<div class="question">Which seasons of Deadwood have you watched?
+			</div>
+			Note that if you do not select "3" You will receive a special visit from a counselor who will help you explore the error of your ways and correct this problem in your life.<br />
+			<div class="code">
+				&ltinput type="checkbox" name="zero" value=0&gt 0
+			</div>
+			<div class="view">
+				<input type="checkbox" name="1">1
+				<input type="checkbox" name="2">2
+				<input type="checkbox" name="3">3
+			</div>
+			Since we're pretty sure that all decent people will select "3" we could have it selected as a default.
+			<div class="code">
+				&ltinput type="checkbox" name="3" checked&gt
+			</div>
+			<div class="view">
+				<input type="checkbox" name="1">1
+				<input type="checkbox" name="2">2
+				<input type="checkbox" name="3" checked>3
+			</div>
+			<hr>
+			What if we want people to pick from a list, but don't want to use checkboxes or radio buttons? Selection fields to the rescue!
+			For a single choice in a drop down menu, 
+			<div class="question">Which is the best female character in Deadwood?
+			</div>
+			<div class="code">&ltselect name="female"&gt<br />
+				<div class="indent">
+					&ltoption value="alma"&gtAlma Garrett-Ellsworth&lt/option&gt<br />
+					&ltoption value="jane"&gtJane Canary&lt/option&gt<br />
+					&ltoption value="jewel"&gtJewel&lt/option&gt<br />
+					&ltoption value="trixie"&gtTrixie&lt/option&gt<br />
+					&ltoption value="martha"&gtMartha Bullock&lt/option&gt</div>
+					&lt/select&gt
+
+				</div>
+				<div class="view"><form><select name="female">
+					<option value="alma">Alma Garrett-Ellsworth</option>
+					<option value="jane">Jane Canary</option>
+					<option value="jewel">Jewel</option>
+					<option value="trixie">Trixie</option>
+					<option value="martha">Martha Bullock</option>
+				</select></form>
+			</div>
+			Notice that both the <span class="code">select</span> and the <span class="code">option</span> tag require an element <b>and</b> a closing tag.<br />
+			Now, perhaps we need to allow for multiple selections in a list, but we've got a serious vendetta against checkboxes.<br />
+			<div class="question">Choose the lackeys who work for Al Swearengen
+			</div>
+			<div class="code">&ltselect name="lackey" multiple="multiple"&gt<br />
+				<div class="indent">
+					&ltoption value="dority"&gtDan Dority&lt/option&gt<br />
+					&ltoption value="eb"&gtE.B. Farnam&lt/option&gt<br />
+					&ltoption value="richardson"&gtRichardson&lt/option&gt<br />
+					&ltoption value="johnny"&gtJohnny Burns&lt/option&gt<br />
+					&ltoption value="adams"&gtSilas Adams&lt/option&gt<br />
+					&ltoption value="leon"&gtLeon&lt/option&gt
+				</div>
+				&lt/select&gt
+			</div>
+			Now we can use shift or control to select more than one option from our list.
+			<div class="view">
+				<select name="lackey" multiple="multiple">
+					<option value="dority">Dan Dority</option>
+					<option value="eb">E.B.Farnam</option>
+					<option value="richardson">Richardson</option>
+					<option value="johnny">Johnny Burns</option>
+					<option value="adams">Silas Adams</option>
+					<option value="leon">Leon</option>
+				</select></form>
+			</div>
+			If we need to, we can also pre-select some options:
+			<div class="code">&ltoption value="dority" selected&gtDan Dority&lt/option&gt
+			</div>
+			<div class="view"><select name="lackey" multiple="multiple">
+				<option selected>Dan Dority</option>
+				<option>E.B.Farnam</option>
+				<option>Richardson</option>
+				<option>Johnny Burns</option>
+				<option>Silas Adams</option>
+				<option>Leon</option>
+			</select>
+		</div>
+		<hr>
+		What do we do with all this important information once we've collected it? We will obviously need to submit it to the National Clearinghouse for Deadwood Watcher Data (NCDWD) for their ongoing monitoring operations!<br />
+		<div class="code">&ltinput type="submit" value="submit"&gt
+		</div>
+		The value attribute here defines what the user sees on the button.  You could use "send" or "apple" or whatever, but I like "submit" because it makes it clear that you are bowing down to your overseers.
+		<div class="view"><input type="submit" value="Submit">
+		</div>
+		If you wanted to be fancy, you could also use an image for the button.
+		<div class="code">&ltinput type="image" name="Freight" src="BlackHillsFreight.jpg" height="200" alt="Black Hills Freight title="Send by Black Hills Freight (submit)"&gt
+		</div>
+		<div class="view"><form><input type="image" name="Freight" src="http://elishebafay.com/PracticeStuff/BlackHillsFreight.jpg" height="200" alt="Black Hills Freight" title="Send by Black Hills Freight (submit)"></form>
+		</div>
+		But what if, in an attempt to complete this survey correctly, we went back and watched all three seasons of Deadwood, and in doing so realized we'd better change several of our answers. We will need to reset the form!
+		<div class="code">&ltinput type="reset" value="reset"&gt
+		</div>
+		Again, we could change the value to change the text on the button if we wanted to.
+		<div class="view"><form><input type="reset" value=Reset></form>
+		</div>
+		<hr>
+		<!--Final forms-->
+		When we've got all our form elements made, we can wrap them up all pretty-like using the fieldset and legend tags.<br />
+		<!--Final code div-->
+		<div class="code" id="final">
+			&ltform id="deadwood" action="" method="post"&gt <br />
+			&ltfieldset&gt<br />
+			&ltlegend&gt
+			<div class="indent">Deadwood Survey</div>
+			&lt/legend&gt<br />
+			
+			*Whole bunch of form stuff here!!<br />
+			&lt/fieldset&gt<br />
+			&lt/form&gt
+		</div><hr>
+		Our final form might look something like this:
+		<p data-height="500" data-theme-id="15486" data-slug-hash="OVGjPX" data-default-tab="result" data-user="vortle86" class='codepen' id="deadwoodpen">See the Pen <a href='http://codepen.io/vortle86/pen/OVGjPX/'>OVGjPX</a> by Elisheba Fay (<a href='http://codepen.io/vortle86'>@vortle86</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+		<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+
+	</body>
+	</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="eng-us">
+
+<head>
+	<title>Mr Tibblebottom's Kitty Cat Emporium</title>
+
+	<meta charset=“UTF-8”>
+	<link rel="stylesheet" type="text/css" href="http://elishebafay.com/PracticeStuff/cssreset.css">
+	<link rel="stylesheet" type="text/css" href="tibblebottom.css">
+
+
+</head>
+
+<body>
+	<header id="header-wrapper">
+		<div class="container" id="header">
+			<div id="logo">
+				<span class="ef">
+					<a href="http://elishebafay.com">Elisheba Fay</a></span>
+				</div><!--end logo div-->
+
+				<nav id="nav">
+					<ul>
+						<li><a href="http://elishebafay.com">Home</a></li>
+						<li class="current_page_item"><a href="rebuildResume.html">Resume</a></li>
+						<li><a href="rebuildPortfolio.html">Portfolio</a></li>
+						<li><a href="mailto:elisheba@elishebafay.com" title="Email Me!"><span id="mail" class="fa fa-envelope-o"></span> Mail</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<div id="container">
+
+			<img src="http://www.animatedgif.net/underconstruction/btrainbow1_e0.gif" class="pretty">
+
+			<h1>Mr Tibblebottom's Kitty Cat Emporium</h1>
+
+			<img src="http://www.animatedgif.net/animals/cats/aacat_e0.gif" alt="walking kitty" class="pretty" />
+
+			<img src="http://content.tv3.ie/content/images/0030/bubbles-cats_24561.jpg" alt="Bubbles with some fuckin nice kitty cats" width="300" class="pretty"><br />
+
+
+			<table id="pricetable">
+				<!--Table Headings-->
+				<tr>
+					<th>Picture (does not represent actual stock on hand)</th>
+					<th>Item Name</th>
+					<th>Description</th>
+					<th>Single-Item Price</th>
+					<th>Enter quantity desired to see special bulk purchase incentives!</th>
+					<th>Item Subtotal</th>
+				</tr>
+				<!--Orange Cats-->
+				<tr>
+					<td class="pic">
+						<img src="http://cf.ltkcdn.net/cats/images/std/144663-300x199-Classic-orange-tabby.jpg" width="150">
+					</td>
+					<td class="name">
+						Orange Cats
+					</td>
+					<td class="desc">
+						Known commonly as orange or mackarel tabby, this classic kitty is the archetypal alley cat.  They will produce a moderate amount of hijinx but remain independent.
+					</td>
+					<td class="baseprice">
+						$3.39
+					</td>
+					<td class="qty">
+						<input type="text" id="oq" size = 8 value="Orange Cats Desired">
+					</td>
+					<td class="subtotal" id="orangesubtotal">
+						0.00
+					</td>
+				</tr>
+				<!--Grey Cats-->
+				<tr>
+					<td class="pic">
+						<img src="http://i1080.photobucket.com/albums/j328/catlover6683/GreyKitty.jpg" width="150">
+					</td>
+					<td class="name">
+						Grey Cats
+					</td>
+					<td class="desc">
+						Reserved, laid back, but affectionate, these cats can be found enjoying rays of sunshine and getting a good ear rub.
+					</td>
+					<td class="baseprice">
+						$4.17
+					</td>
+					<td class="qty">
+						<input type="text" id="gq" size = 8 value="Grey Cats">
+					</td>
+					<td class="subtotal" id="greysubtotal">
+						0.00
+					</td>
+				</tr>
+				<!--Fancy Cats-->
+				<tr>
+					<td class="pic">
+						<img src="http://elishebafay.com/PracticeStuff/ChokSheBlanket.jpg" width="150">
+					</td>
+					<td class="name">
+						Fancy Cats
+					</td>
+					<td class="desc">
+						These limited edition, handpainted cats display our finest craftsmanship.  They come complete with sex-linked genes for red coloration as well as agouti genes causing their beautiful ticked coloration.  They are in limited supply due to the intensive crafstmanship that goes into each one.
+					</td>
+					<td class="baseprice">
+						$6.34
+					</td>
+					<td class="qty">
+						<input type="text" size=8 id="fcq" value="Fancy Cats">
+					</td>
+					<td class="subtotal" id="fancysubtotal">
+						0.00
+					</td>
+				</tr>
+				<!--Black and White Cats-->
+				<tr>
+					<td class="pic">
+						<img src="http://elishebafay.com/PracticeStuff/blackandwhite.png" height="150">
+					</td>
+					<td class="name">
+						Bulk Black and White Cats
+					</td>
+					<td class="desc">
+						These cats are a best value for those looking for a high kitty to dollar ratio.  They may include <a href="http://i.imgur.com/CVMvMrI.png" alt="this cocksucker here">scratch and dent merchandise</a> and may display <a href="https://www.youtube.com/watch?v=1SF7G9UjVi0" alt="cat spank">programming errors</a>, but overall will run cat.exe <a href="http://i.imgur.com/6grmFJY.gif" alt="cat.exe has encountered an error">at least 55% of the time</a> correctly.Also, some of the <a href="http://i.imgur.com/5iCh7.gif" alt="cat stairs">bugs are actually features!</a>
+					</td>
+					<td class="baseprice">
+						$2.23
+					</td>
+					<td class="qty">
+						<input type="text" size=8 id="bwq" value="Black and White Cats">
+					</td>
+					<td class="subtotal" id="bwsubtotal">0.00</td>
+				</tr>
+				<tr>
+					<td />
+					<td />
+					<td />
+					<td />
+					<td ><button type="button" id="totalcalc">Click for Total</button></td>
+					<td id="total"></td>
+				</tr>	
+			</form>
+		</table>
+		<div id="media">
+
+			<iframe width="350" height="200" src="https://www.youtube.com/embed/9AP8_LaUC4w" frameborder="0" allowfullscreen></iframe><br />
+			<audio controls="controls" source src="http://elishebafay.com/PracticeStuff/Soft%20Kitty%20Warm%20Kitty%20Acapella.mp3" autoplay="autoplay" preload="auto">Soft Kitty https://www.youtube.com/watch?v=9AP8_LaUC4w</audio>
+		</div>
+	</div>
+
+</div>
+<script src="tibblebottom.js"></script>
+</body>
+</html>

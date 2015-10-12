@@ -1,6 +1,5 @@
 
-body
-{
+body{
 	margin: 0em;
 	padding: 0em;
 	background: #ECECEC url(images/main-bg.jpg) repeat;
@@ -10,106 +9,262 @@ body
 }
 .container{
 	margin-left: auto;
-    margin-right: auto;
-    width: 960px;
+  margin-right: auto;
+  width: 100%;
 }
 #header{
 	position: relative;
 }
 #header-wrapper{
-	overflow:hidden;
-	margin-bottom:1.5rem;
-	padding:2rem 0rem 3.5rem 0rem;
-	background:#fc6;
-	box-shadow: inset 0 -10px 20px -10px rgba(0,0,0,.30);
-	height:2.5rem;
+ overflow:hidden;
+ padding:1rem 0rem 3.5rem 0rem;
+ background:#fc6;
+ box-shadow: inset 0 -10px 20px -10px rgba(0,0,0,.30);
+ height:13rem;
+}
+@media(min-width: 800px){
+  #header-wrapper{
+   overflow:hidden;
+   margin-bottom:1.5rem;
+   padding:2rem 0rem 3.5rem 0rem;
+   background:#fc6;
+   box-shadow: inset 0 -10px 20px -10px rgba(0,0,0,.30);
+   height:2.5rem;
+ }
+}
+/*Mobile settings for Logo*/
+#outer{
+  display:table;
+  width:100%; 
+}
+#inner{
+  display:table-cell;
 }
 #logo{
-	display:block;
+  text-align: center;
 }
 #logo a{
-    display: inline-block;
-    text-decoration: none;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 400;
-    font-size: 3rem;
-    color: #FFF !important;
+  text-decoration: none;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  font-size: 3.3rem;
+  color: #FFF !important;
 }
+
+/*Laptop & desktop setting for Logo*/
+@media (min-width: 800px){
+  #logo{
+    text-align:initial;
+    padding-left:5%;
+  }
+  #logo a{
+    font-size:3.8rem;
+  }
+}
+/*Mobile/tablet settings for main nav*/
 #nav {
+  display:block;
+}
+#nav ul{
+ text-align: center;
+ list-style:none;
+ margin:0;
+ padding:0;
+}
+#nav li{
+ display:block;
+ text-align: -webkit-match-parent;
+}
+#nav li :hover{
+ color:#f58a07;
+ background: #ECECEC url(images/main-bg.jpg) repeat;
+ font-weight:400;
+ font-size:1.8rem;
+}
+#nav a{
+ height: 2rem;
+ text-decoration: none;
+ text-transform: uppercase;
+ font-family: 'Oswald', sans-serif !important;
+ font-size: 1.8rem;
+ font-weight: 300;
+ color: #FFFFFF;
+ border-radius: 5px;
+ padding:0.3rem 2rem;
+}
+/*Laptop & desktop setting for main Nav*/
+@media(min-width:800px){
+  #nav {
     position: absolute;
     top: 0;
     right: 0;
     display:block;
     vertical-align: baseline;
-}
-#nav ul{
-	text-align: center;
-	margin-top:1rem;
-	list-style:none;
-	vertical-align: baseline;
-}
-#nav li{
-	display:inline-block;
-	text-align: -webkit-match-parent;
-}
-#nav li :hover{
-	color:#f58a07;
-	background: #ECECEC url(images/main-bg.jpg) repeat;
-	font-weight:400;
-	font-size:1.2rem;
-
-}
-#nav a{
-	display: block;
-    float: left;
-    height: 4em;
-    padding: 2.30em 1em 0em 1em;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-family: 'Oswald', sans-serif !important;
-    font-size: 1.2rem;
-    font-weight: 300;
-    color: #FFFFFF;
-    border-radius: 5px 5px 0px 0px;
+  }
+  #nav ul{
+   text-align: center;
+   margin-top:1rem;
+   list-style:none;
+   vertical-align: baseline;
+ }
+ #nav li{
+   display:inline-block;
+   text-align: -webkit-match-parent;
+ }
+ #nav li :hover{
+   color:#f58a07;
+   background: #ECECEC url(images/main-bg.jpg) repeat;
+   font-weight:400;
+   font-size:1.2rem;
+ }
+ #nav a{
+   display: block;
+   float: left;
+   height: 2.8rem;
+   padding: 2rem 1rem 0.5rem 1rem;
+   text-decoration: none;
+   text-transform: uppercase;
+   font-family: 'Oswald', sans-serif !important;
+   font-size: 1.2rem;
+   font-weight: 300;
+   color: #FFFFFF;
+   border-radius: 5px 5px 0px 0px;
+ }
 }
 img{
 	display:block;
 	width:100%;
 }
-
-#infoblocks{
-	overflow: hidden;
-    padding: 2em 0em 0em 0em;
+/*Mobile/tablet settings for Social*/
+#social{
+  background: #443e2a;
+  text-align: center;
+  width:100%;
+  height: 7.8rem;
 }
-
-.row>* {
+#social ul{
+  text-align: center;
+  list-style:none;
+  text-align: center;
+  height:2.7rem;
+  margin:0;
+  padding:0.3rem 0rem;
+}
+#social li{
+  display:block;
+  height:2.6rem;
+}
+#social a:hover{
+  color:#f58a07;
+  background: #ECECEC url(images/main-bg.jpg) repeat;
+  font-weight:400;
+  font-size:1.4rem;
+}
+#social a{
+  padding: 0.3rem 1.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Oswald', sans-serif !important;
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #FFFFFF;
+  border-radius: 5px;
+  margin:0;
+}
+/*Laptop/desktop settings for Social*/
+@media(min-width: 800px){
+  #social{
+    background: #443e2a;
+    text-align: center;
+    width:100%;
+    height: 2.7rem;
+    margin-bottom:1rem;
+  }
+  #social nav{
+    height:2.7;
+  }
+  #social ul{
+    text-align: center;
+    list-style:none;
+    display:inline-table;
+    text-align: center;
+    height:2.7rem;
+    margin:0;
+  }
+  #social li{
+    display:inline;
+  }
+  #social a:hover{
+    color:#f58a07;
+    background: #ECECEC url(images/main-bg.jpg) repeat;
+    font-weight:400;
+    font-size:1.4rem;
+  }
+  #social a{
+    display: block;
     float: left;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+    padding: 0.3rem 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif !important;
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: #FFFFFF;
+    border-radius: 5px;
+    margin:0;
+  }
+}
+#cellspacer{
+  background:#567941;
+  height:2.5rem;
+}
+@media(min-width: 800px){
+  #cellspacer{
+    display:none;
+  }
+}
+#infoblocks{
+  display:none;
+}
+/*Laptop/desktop settings for infoblocks*/
+@media(min-width: 800px){
+  #infoblocks{
+    display:initial;
+    overflow: hidden;
+    padding: 2rem 0rem 0rem 0rem;
+ }
+ .row>* {
+  float: left;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .\33 u {
-    width: 25%;
-http://localhost/personal_redesign/spectorLureCoursecropped.jpg}
-#infoblocks .box {
-    padding: 0 2em;
+  width: 25%;
 }
-#infoblocks h2 {
-    margin: 0;
-    padding: 0;
-    text-transform: uppercase;
-    font-size: 1.75em;
-    font-weight: 700;
-    color: #084887;
+#infoblocks .box {
+  padding: 0 2em;
+}
+#infoblocks h2{
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  font-size: 1.75em;
+  font-weight: 700;
+  color: #084887;
+}
+#infoblocks a{
+  text-decoration: none;
 }
 #infoblocks .subtitle {
-    margin: 0 0 1em 0;
-    padding: 0 0 1em 0;
-    border-bottom: 1px solid #E2E2E2;
-    text-transform: uppercase;
-    font-size: 1.25em;
-    font-weight: 400;
-    color: #3D3D3D;
+  margin: 0 0 1em 0;
+  padding: 0 0 1em 0;
+  border-bottom: 1px solid #E2E2E2;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  font-weight: 400;
+  color: #3D3D3D;
+}
 }
 ul.style1{
 	-webkit-padding-start: 25px;
@@ -145,18 +300,199 @@ ul.style1 a {
     padding: 0.75em 2.00em;
     border-radius: 5px;
 }
-#footer {
+.center{
+	margin: 0 auto;
+	display:table;
+}
+#download{
+	margin:auto;
+	display:table-cell;
+}
+
+footer {
   overflow: hidden;
   padding: 20px 0px;
   background: #fc6;
   width:100%;
-  height:30px;
-  margin:45px 0px 0px 0px;
+  height:40px;
+  margin:0px;
   padding:0;
+}
+@media(min-width: 800px){
+  footer{
+    margin:45px 0px 0px 0px;
+    height:30px;
+  }
 }
 #footer p {
   text-align: center;
   font-size: 12px;
-  padding:10px 0px;
+  padding:5px 0px;
   margin:0;
+}
+/*Resume Page*/
+#paper{
+  width:85%;
+  margin:3% auto;
+  background-color:white;
+  padding:2%;
+  overflow:auto;
+  font-family: 'Oswald', sans-serif;
+}
+.name{
+  font-size: 3rem;
+  line-height: 4rem;
+  font-weight: bold;
+  padding: 10px 0 0 0;
+  text-align: center;
+  border-top: 20px solid #fc6;
+  color: #300;
+}
+.contact{
+	font-size:1.2rem;
+	font-weight:300;
+	text-align:center;
+}
+.sectiontitle{
+	font-size: 1.4rem;
+	line-height: 24px;
+	font-weight: 400;
+	text-transform: none;
+	color: #343434;
+	text-align: left;
+	margin-top:10px;
+}
+.bottomborder{
+	margin-bottom: 8px;
+	border-bottom: 1px solid;
+	border-color: #000;
+	padding: 5px;
+	clear: both;
+	font-weight: 400;
+	text-transform: none;
+	color: #343434;
+	line-height: 14px;
+}
+.blurb{
+	margin:2rem auto;
+	text-align: center;
+	font-size:1.2rem;
+	font-weight:300;
+}
+.twocol{
+  line-height: 1.4rem;
+  border-collapse: collapse;
+  width:90%;
+  margin:auto;
+}
+.twocol td{
+  width:50%;
+  height:1.4rem;
+}
+.twocol ul li{
+	line-height:2rem;
+	font-size:1.1rem;
+	font-weight: 300;
+}
+.skills{
+  line-height: 2rem;
+  border-collapse: collapse;
+  border-spacing: 2px;
+  width:90%;
+  padding:5px;
+  text-align: center;
+  font-size:1.1rem;
+  font-weight: 300;
+}
+.skills th{
+  font-weight: 400;
+}
+.programline{
+  font-weight: 400;
+  line-height:2rem;
+  font-size: 1.2rem;
+}
+.school{
+  text-decoration: underline;
+  font-size: 1rem;
+}
+.description{
+	font-size:1rem;
+	font-weight:300;
+}
+/*FAQ page*/
+.question{
+  background:#567941;
+  color:#443e2a;
+  display:block;
+  margin:auto;
+  padding:0.5rem 0.5rem 0.5rem 2rem;
+  cursor:pointer;
+  width:70%;
+  border: 1px solid white;
+  font-size: 1.2rem;
+}
+#notmyname{
+  width:50%;
+}
+.faqtext p, .faqtext h4{
+  width:70%;
+  margin:auto;
+  padding-left:1.8rem;
+  padding-right:1.8rem;
+  font-size:1rem;
+  text-indent:1rem;
+}
+.faqtext h4{
+  text-align:center;
+}
+audio{
+  display:block;
+  margin:auto;
+}
+#GrumpyHat{
+  width:200px;
+}
+#level49{
+  display:block;
+  width:30%;
+  margin:1rem auto;
+}
+.faqtext{
+  display:none;
+}
+/*Portfolio page*/
+.itemholder{
+  width:75%;
+  background-color: WhiteSmoke;
+  margin:2rem auto;
+}
+.courses{
+  border:15px solid #b3d89c;
+}
+.itemholder p{
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 0.5rem;
+}
+.itemholder a{
+  text-decoration: none;
+  color:#443e2A;
+}
+.itemholder h2{
+  padding:0.5rem;
+}
+#blackhills{
+  width:200px;
+  margin:auto;
+  border:10px solid #443e2a;
+}
+#csfa{
+  width:300px;
+  margin:10px auto;
+  border:10px solid #6d544f;
+}
+.pen{
+  width:70%;
+  margin:auto;
 }
